@@ -54,8 +54,8 @@ public class BanchoStatusChecker extends Thread implements EventListener {
 	@SuppressWarnings("unchecked")
 	public BanchoStatusChecker(Config config) {
 		enabled = true;
-		timeout = config.getInt("bancho.timeout")*1000;
-		String host = config.getString("bancho.host");
+		timeout = 10*1000;
+		String host = "http://c.ppy.sh";
 		
 		requiredSuccesses = config.getInt("bancho.successes");
 		requiredFailures = config.getInt("bancho.failures");
