@@ -57,8 +57,8 @@ public class BanchoStatusChecker extends Thread implements EventListener {
 		timeout = 10*1000;
 		String host = "http://c.ppy.sh";
 		
-		requiredSuccesses = config.getInt("bancho.successes");
-		requiredFailures = config.getInt("bancho.failures");
+		requiredSuccesses = 10;
+		requiredFailures = 5;
 		
 		MustacheFactory mf = new DefaultMustacheFactory();
 		msgOffline = mf.compile(new StringReader("‼ ⚠ **Bancho is down!** ⚠ ‼\n\n*{{tag-offline}}*"), "offline");
