@@ -40,7 +40,7 @@ public class StorasDiscord {
 	private static OsuUserCatche osuUserCatche;
 	private static CommandListener commandHandler;
 	private static GuildSettings guildSettings;
-	private static List<String> operators = new ArrayList<>();
+	//private static List<String> operators = new ArrayList<>();
 	
 	public static void main(String... args) throws SQLException, LoginException, IllegalArgumentException {
 		try {
@@ -57,7 +57,7 @@ public class StorasDiscord {
 			guildSettings = new GuildSettings(database);
 			
 			String token = System.getenv("TOKEN");
-			operators = config.getStringList("general.operators");
+			//operators = config.getStringList("general.operators");
 			client = new JDABuilder().setBotToken(token)
 				.addListener(new OsuTracker(osuUserCatche))
 				.addListener(commandHandler = new CommandListener())
