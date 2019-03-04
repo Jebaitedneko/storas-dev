@@ -33,13 +33,6 @@ public class OsuTracker extends Thread implements EventListener {
 		this.userCatche = osuUserCatche;
 	}
 	
-	@Override
-	public void onEvent(Event event) {
-		if (event instanceof ReadyEvent && StorasDiscord.getConfig().getBoolean("tracker.enabled")) {
-			start();
-		}
-	}
-
 	public void run() {
 		try {
 			// Wait 10 seconds before starting.
@@ -65,7 +58,7 @@ public class OsuTracker extends Thread implements EventListener {
 				Iterator<TrackedCountry> countryIterator = countryTrackers.iterator();
 				while (countryIterator.hasNext()) {
 					TrackedCountry tracker = countryIterator.next();
-					TextChannel channel = StorasDiscord.getJDA().getTextChannelById(tracker.getChannelId());
+					TextChannel channel = StorasDiscord.getJDA().getTextChannelById("552261790944460820");
 					if (channel == null) {
 						//tracker.removeTracker();
 						countryIterator.remove();
@@ -76,7 +69,7 @@ public class OsuTracker extends Thread implements EventListener {
 				Iterator<TrackedPlayer> playerIterator = playerTrackers.iterator();
 				while (playerIterator.hasNext()) {
 					TrackedPlayer tracker = playerIterator.next();
-					TextChannel channel = StorasDiscord.getJDA().getTextChannelById(tracker.getChannelId());
+					TextChannel channel = StorasDiscord.getJDA().getTextChannelById("552261878823387168");
 					if (channel == null) {
 						//tracker.removeTracker();
 						playerIterator.remove();
@@ -107,10 +100,10 @@ public class OsuTracker extends Thread implements EventListener {
 				}
 				
 				// Add individual trackers (new or append to country tracker)
-				for (TrackedPlayer tracker : playerTrackers) {
-					OsuUpdatablePlayer updatable = updatablePlayers.get(tracker.getIdentifier());
-					updatable.addScoreHandler(tracker);
-				}
+				//for (TrackedPlayer tracker : playerTrackers) {
+				//	OsuUpdatablePlayer updatable = updatablePlayers.get(tracker.getIdentifier());
+				//	updatable.addScoreHandler(tracker);
+				//}
 				
 				// Update players in parallel
 				OsuUserUpdater userUpdater = new OsuUserUpdater(15, userCatche);
