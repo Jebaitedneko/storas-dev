@@ -13,9 +13,9 @@ import com.typesafe.config.ConfigFactory;
 
 import lt.ekgame.storasbot.commands.engine.CommandListener;
 import lt.ekgame.storasbot.plugins.AntiShitImageHosts;
-import lt.ekgame.storasbot.plugins.BanchoStatusChecker;
+//import lt.ekgame.storasbot.plugins.BanchoStatusChecker;
 import lt.ekgame.storasbot.plugins.BeatmapLinkExaminer;
-import lt.ekgame.storasbot.plugins.GameChanger;
+//import lt.ekgame.storasbot.plugins.GameChanger;
 import lt.ekgame.storasbot.plugins.GuildSettings;
 import lt.ekgame.storasbot.plugins.Settings;
 import lt.ekgame.storasbot.plugins.osu_top.OsuTracker;
@@ -63,8 +63,8 @@ public class StorasDiscord {
 				.addListener(commandHandler = new CommandListener())
 				.addListener(new BeatmapLinkExaminer())
 				.addListener(new AntiShitImageHosts())
-				.addListener(new BanchoStatusChecker())
-				.addListener(new GameChanger())
+				//.addListener(new BanchoStatusChecker())
+				//.addListener(new GameChanger())
 				.buildAsync();
 			
 		} catch (Exception e) {
