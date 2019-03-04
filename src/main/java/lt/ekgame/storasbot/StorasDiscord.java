@@ -63,8 +63,8 @@ public class StorasDiscord {
 				.addListener(commandHandler = new CommandListener())
 				.addListener(new BeatmapLinkExaminer())
 				.addListener(new AntiShitImageHosts())
-				.addListener(new BanchoStatusChecker(config))
-				.addListener(new GameChanger(config))
+				.addListener(new BanchoStatusChecker())
+				.addListener(new GameChanger())
 				.buildAsync();
 			
 		} catch (Exception e) {
