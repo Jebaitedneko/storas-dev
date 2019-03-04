@@ -32,6 +32,12 @@ public class OsuTracker extends Thread implements EventListener {
 	public OsuTracker(OsuUserCatche osuUserCatche) {
 		this.userCatche = osuUserCatche;
 	}
+	@Override
+	public void onEvent(Event event) {
+		if (event instanceof ReadyEvent && true) {
+			start();
+		}
+	}
 	
 	public void run() {
 		try {
