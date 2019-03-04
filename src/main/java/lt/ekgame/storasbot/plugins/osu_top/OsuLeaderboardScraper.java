@@ -23,8 +23,8 @@ import net.dv8tion.jda.utils.SimpleLog;
 public class OsuLeaderboardScraper {
 	
 	private static final SimpleLog LOG = SimpleLog.getLog("Leaderboard Scraper");
-	private static final String RANK_LISTING = "http://osu.ppy.sh/p/pp?c=%s&m=%d&page=%d";
-	private static final String RANK_LISTING_GLOBAL = "http://osu.ppy.sh/p/pp?&m=%d&page=%d";
+	private static final String RANK_LISTING = "http://old.ppy.sh/p/pp?c=%s&m=%d&page=%d";
+	private static final String RANK_LISTING_GLOBAL = "http://old.ppy.sh/p/pp?&m=%d&page=%d";
 	
 	private ExecutorService workers;
 	private List<Future<OsuUpdatableLeaderboard>> futures = new ArrayList<>();
