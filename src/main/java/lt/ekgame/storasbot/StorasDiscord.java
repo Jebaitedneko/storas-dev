@@ -40,7 +40,7 @@ public class StorasDiscord {
 	private static OsuUserCatche osuUserCatche;
 	private static CommandListener commandHandler;
 	private static GuildSettings guildSettings;
-	//private static List<String> operators = new ArrayList<>();
+	private static List<String> operators = new ArrayList<>();
 	
 	public static void main(String... args) throws SQLException, LoginException, IllegalArgumentException {
 		try {
@@ -101,9 +101,9 @@ public class StorasDiscord {
 		return guildSettings.getSettings(guild);
 	}
 	
-//	public static boolean isOperator(User user) {
-//		return operators.contains(user.getId());
-//	}
+	public static boolean isOperator(User user) {
+		return operators.contains(user.getId());
+	}
 	
 	public static String getPrefix(Guild guild) {
 		String nickname = guild.getNicknameForUser(client.getSelfInfo());
