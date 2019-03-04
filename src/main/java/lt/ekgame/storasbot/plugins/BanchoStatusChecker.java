@@ -64,11 +64,6 @@ public class BanchoStatusChecker extends Thread implements EventListener {
 		msgOffline = mf.compile(new StringReader("‼ ⚠ **Bancho is down!** ⚠ ‼\n\n*{{tag-offline}}*"), "offline");
 		msgOnline = mf.compile(new StringReader("✅ **Bancho is back up!** ✅\nBancho was down for **{{time}}**.\n\n*{{tag-online}}*"), "online");
 		
-		tags = (List<List<String>>) [
-		                             ["Tagline offline 1", "Tagline online 1"]
-		                             ["Tagline offline 2", "Tagline online 2"]
-	                                    ];
-	    
 		try {
 			RequestConfig defaultRequestConfig = RequestConfig.custom()
 			    .setSocketTimeout(timeout)
