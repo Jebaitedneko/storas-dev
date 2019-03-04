@@ -52,7 +52,7 @@ public class BanchoStatusChecker extends Thread implements EventListener {
 	private List<String> currentTags;
 	
 	@SuppressWarnings("unchecked")
-	public BanchoStatusChecker(Config config) {
+	public BanchoStatusChecker() {
 		enabled = true;
 		timeout = 10*1000;
 		String host = "http://c.ppy.sh";
