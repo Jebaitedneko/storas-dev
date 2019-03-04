@@ -101,9 +101,9 @@ public class StorasDiscord {
 		return guildSettings.getSettings(guild);
 	}
 	
-	public static boolean isOperator(User user) {
-		return operators.contains(user.getId());
-	}
+//	public static boolean isOperator(User user) {
+//		return operators.contains(user.getId());
+//	}
 	
 	public static String getPrefix(Guild guild) {
 		String nickname = guild.getNicknameForUser(client.getSelfInfo());
