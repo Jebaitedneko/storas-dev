@@ -83,7 +83,7 @@
 			</dependency>
 			<dependency>
 				<groupId>com.github.Jebaitedneko</groupId>
-				<artifactId>osu-api-connector</artifactId>
+				<artifactId>osuApiConnector</artifactId>
 				<version>0.12.1</version>
 			</dependency>
 			<dependency>
