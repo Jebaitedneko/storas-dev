@@ -28,10 +28,10 @@ public class CommandEval implements Command<BotCommandContext>  {
 	
 	@Override
 	public CommandResult execute(CommandIterator command, BotCommandContext context) {
-		//StorasBot.getJDA().addEventListener(new CodeExecutor(context.getMessage()));
-		//return CommandResult.OK; // Content changes are handled by the executor
+		StorasBot.getJDA().addEventListener(new CodeExecutor(context.getMessage()));
+		return CommandResult.OK; // Content changes are handled by the executor
 		
 		// Disabled for potential CPU drain
-		return context.replyError("This feature is disabled for possible CPU draining problems.");
+		//return context.replyError("This feature is disabled for possible CPU draining problems.");
 	}
 }
