@@ -50,9 +50,9 @@ public class StorasDiscord {
 				SimpleLog.LEVEL = Level.INFO;
 			
 			config = ConfigFactory.parseFile(new File(args[0])); // Very important that this is first
-			database = new Database(config);
+			database = new Database();
 			database.testConnection();
-			osuApi = new OsuApi(config);
+			osuApi = new OsuApi();
 			osuUserCatche = new OsuUserCatche();
 			guildSettings = new GuildSettings(database);
 			
