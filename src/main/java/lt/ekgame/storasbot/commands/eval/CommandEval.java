@@ -1,5 +1,6 @@
 package lt.ekgame.storasbot.commands.eval;
 
+import lt.ekgame.storasbot.StorasDiscord;
 import lt.ekgame.storasbot.commands.engine.BotCommandContext;
 import lt.ekgame.storasbot.commands.engine.Command;
 import lt.ekgame.storasbot.commands.engine.CommandFlags;
@@ -28,7 +29,7 @@ public class CommandEval implements Command<BotCommandContext>  {
 	
 	@Override
 	public CommandResult execute(CommandIterator command, BotCommandContext context) {
-		StorasBot.getJDA().addEventListener(new CodeExecutor(context.getMessage()));
+		StorasDiscord.getJDA().addEventListener(new CodeExecutor(context.getMessage()));
 		return CommandResult.OK; // Content changes are handled by the executor
 		
 		// Disabled for potential CPU drain
