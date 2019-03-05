@@ -29,7 +29,7 @@ public class Database {
 	private String host, port, database, username, password;
 	private DBI dbi;
 
-	public Database(Config config) throws SQLException {
+	public Database() throws SQLException {
 		this.host     = System.getenv("DBHOST");
 		this.port     = System.getenv("DBPORT");
 		this.database = System.getenv("DBDATABASE");
