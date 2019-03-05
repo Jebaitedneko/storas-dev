@@ -82,7 +82,7 @@
 				<version>1.9.2</version>
 			</dependency>
 			<dependency>
-				<groupId>com.github.tillerino</groupId>
+				<groupId>com.github.Jebaitedneko</groupId>
 				<artifactId>osu-api-connector</artifactId>
 				<version>0.12.1</version>
 			</dependency>
