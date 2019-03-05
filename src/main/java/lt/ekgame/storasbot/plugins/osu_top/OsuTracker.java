@@ -105,11 +105,11 @@ public class OsuTracker extends Thread implements EventListener {
 					}
 				}
 				
-				// Add individual trackers (new or append to country tracker)
-				//for (TrackedPlayer tracker : playerTrackers) {
-				//	OsuUpdatablePlayer updatable = updatablePlayers.get(tracker.getIdentifier());
-				//	updatable.addScoreHandler(tracker);
-				//}
+				// Add individual trackers (new or append to country tracker) used to be tracker.getidentifier()
+				for (TrackedPlayer tracker : playerTrackers) {
+					OsuUpdatablePlayer updatable = updatablePlayers.get(player.getIdentifier());
+					updatable.addScoreHandler(tracker);
+				}
 				
 				// Update players in parallel
 				OsuUserUpdater userUpdater = new OsuUserUpdater(15, userCatche);
