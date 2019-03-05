@@ -39,7 +39,7 @@ public class OsuUserUpdater {
 	
 	public void awaitTermination() throws InterruptedException {
 		workers.shutdown();
-		workers.awaitTermination(1, TimeUnit.NANOSECONDS);
+		workers.awaitTermination(1, TimeUnit.HOURS);
 	}
 	
 	private class Worker implements Runnable {
