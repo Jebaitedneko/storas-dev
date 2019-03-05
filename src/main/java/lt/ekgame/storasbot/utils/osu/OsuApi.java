@@ -13,7 +13,7 @@ public class OsuApi {
 	
 	private Downloader downloader;
 	
-	public OsuApi(Config config) {
+	public OsuApi() {
 		downloader = new Downloader(System.getenv("OSU_API"));
 	}
 
